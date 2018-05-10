@@ -4,7 +4,7 @@ const webpack = require("webpack");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./"
+    main: "./src"
   },
   output: {
     path: path.resolve("./dist"),
@@ -27,8 +27,7 @@ module.exports = {
     }
   },
   devServer: {
-    hot: true,
-    host: "0.0.0.0",
-    disableHostCheck: true
+    contentBase: path.resolve("./public"),
+    hot: true
   }
 };
